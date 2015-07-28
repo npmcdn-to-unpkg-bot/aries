@@ -1,0 +1,24 @@
+/*
+
+Images
+======
+
+    <img alt="" class="img-rounded" src="http://fillmurray.com/300/300" />
+    <img alt="" class="img-circle" src="http://fillmurray.com/300/300" />
+
+*/
+
+.img-rounded {
+	border-radius: 4px;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+img {
+max-width: 100%;
+border-width: 0;
+vertical-align: middle;
+-ms-interpolation-mode: bicubic;
+}
