@@ -28,7 +28,7 @@ gulp.task('scss', function() {
       this.emit('end');
   };
 
-  return gulp.src('site/public/resources/scss/main.scss')
+  return gulp.src('src/resources/scss/main.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sass())
     .pipe(size({ gzip: true, showFiles: true }))
@@ -45,46 +45,52 @@ gulp.task('scss', function() {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "site/public/"
+            baseDir: "src"
         }
     });
 });
 
 gulp.task('js', function() {
-  gulp.src('site/public/resources/js/*.js')
+  gulp.src('src/resources/js/*.js')
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('site/public/resources/js/min'))
+    .pipe(gulp.dest('site/public/resources/js'))
+});
+
+// Fonts
+gulp.task('fonts', function() {
+    return gulp.src([
+                    'src/resources/fonts'])
+            .pipe(gulp.dest('site/public/resources'));
 });
 
 gulp.task('compress', function() {
-  return gulp.src('site/public/resources/js/vendor/*.js')
+  return gulp.src('src/resources/js/vendor/*.js')
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('site/public/resources/js/vendor/min'));
+    .pipe(gulp.dest('site/public/resources/js/vendor'));
 });
 
 gulp.task('scss-lint', function() {
-  gulp.src('site/public/resources/scss/**/*.scss')
+  gulp.src('src/resources/scss/**/*.scss')
     .pipe(cache('scsslint'))
     .pipe(scsslint());
 });
 
-
 gulp.task('jshint', function() {
-  gulp.src('site/public/resources/js/*.js')
+  gulp.src('src/resources/js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('site/public/resources/scss/**/*.scss', ['scss']);
-  gulp.watch('site/public/resources/js/*.js', ['jshint', 'js']);
-  gulp.watch('site/public/resources/img/*', ['imgmin']);
+  gulp.watch('src/resources/scss/**/*.scss', ['scss']);
+  gulp.watch('src/resources/js/*.js', ['jshint', 'js']);
+  gulp.watch('src/resources/img/*', ['imgmin']);
 });
 
 gulp.task('imgmin', function () {
-    return gulp.src('site/public/resources/img/*')
+    return gulp.src('src/resources/img/*')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
@@ -93,4 +99,4 @@ gulp.task('imgmin', function () {
         .pipe(gulp.dest('site/public/resources/img'));
 });
 
-gulp.task('default', ['browser-sync', 'js', 'compress', 'imgmin', 'scss', 'watch']);
+gulp.task('default', ['browser-sync', 'js', 'fonts', 'compress', 'imgmin', 'scss', 'scss-lint', 'jshint', 'watch']);
