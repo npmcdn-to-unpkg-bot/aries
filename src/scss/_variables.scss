@@ -22,7 +22,8 @@
 
 // -- branding -------------------------
 
-	$base-color: orange;
+	$base-color: #F9D839;
+	$yellow: #F9D839;
 	$comp-color: green;
 	$tertiary-color: red;
 	$alt-1: #777777;
@@ -30,10 +31,12 @@
 	$white: #FFFFFF;
 	$black: #000000;
 
+	$lightgrey: rgb(99,100,102);
+
 // -- typography -----------------------
 
-	$body-font: $helvetica;
-	$header-font: $body-font;
+	$body-font: $texta-regular;
+	$header-font: $texta-black-italic;
 
 // -- links ----------------------------
 

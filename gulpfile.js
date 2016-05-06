@@ -98,6 +98,20 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter('default'));
 });
 
+// Fonts
+gulp.task('fonts', function() {
+    return gulp.src([
+                    'src/fonts/**/*.{eot,svg,ttf,woff,woff2}'])
+            .pipe(gulp.dest('dist/resources/fonts/'));
+});
+
+// Images
+gulp.task('images', function() {
+    return gulp.src([
+                    'assets/*.{jpg,png}'])
+            .pipe(gulp.dest('dist/assets/'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['scss']);
   gulp.watch('src/js/*.js', ['jshint', 'js']);

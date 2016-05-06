@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 
 	Compass style tine & shade functions
@@ -63,6 +64,130 @@ There's also the option to specify a different line-height for it to generate to
   to be used to give REMs for modern browsers and PX for OldIE and Opera mini
 
 */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3213468, 2016-05-03T19:49:07-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed texta(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Texta-BoldIt by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/bold-italic/
+ *
+ * Webfont: Texta-Bold by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/bold/
+ *
+ * Webfont: Texta-Book by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/book/
+ *
+ * Webfont: Texta-BookIt by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/book-italic/
+ *
+ * Webfont: Texta-It by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/italic/
+ *
+ * Webfont: Texta-MediumIt by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/medium-italic/
+ *
+ * Webfont: Texta-Medium by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/medium/
+ *
+ * Webfont: Texta-Regular by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/regular/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3213468
+ * Licensed pageviews: 10,000
+ * texta copyright: Copyright (c) 2014 by Daniel Hernandez &amp; Miguel Hernandez. All rights reserved.
+ *
+ * © 2016 MyFonts Inc
+*/
+/**
+ * @license
+ * MyFonts Webfont Build ID 3213483, 2016-05-03T20:55:51-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed ../fonts/texta(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Texta-BlackIt by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/black-italic/
+ *
+ * Webfont: Texta-Black by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/black/
+ *
+ * Webfont: Texta-Book by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/book/
+ *
+ * Webfont: Texta-BookIt by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/book-italic/
+ *
+ * Webfont: Texta-It by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/italic/
+ *
+ * Webfont: Texta-MediumIt by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/medium-italic/
+ *
+ * Webfont: Texta-Medium by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/medium/
+ *
+ * Webfont: Texta-Regular by Latinotype
+ * URL: http://www.myfonts.com/fonts/latinotype/texta/regular/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3213483
+ * Licensed pageviews: 10,000
+ * ../fonts/texta copyright: Copyright (c) 2014 by Daniel Hernandez &amp; Miguel Hernandez. All rights reserved.
+ *
+ * © 2016 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3108ab");
+@font-face {
+  font-family: 'Texta-BlackIt';
+  src: url("../fonts/texta/3108AB_0_0.eot");
+  src: url("../fonts/texta/3108AB_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_0_0.woff2") format("woff2"), url("../fonts/texta/3108AB_0_0.woff") format("woff"), url("../fonts/texta/3108AB_0_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Texta-Black';
+  src: url("../fonts/texta/3108AB_1_0.eot");
+  src: url("../fonts/texta/3108AB_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_1_0.woff2") format("woff2"), url("../fonts/texta/3108AB_1_0.woff") format("woff"), url("../fonts/texta/3108AB_1_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Texta-Book';
+  src: url("../fonts/texta/3108AB_2_0.eot");
+  src: url("../fonts/texta/3108AB_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_2_0.woff2") format("woff2"), url("../fonts/texta/3108AB_2_0.woff") format("woff"), url("../fonts/texta/3108AB_2_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Texta-BookIt';
+  src: url("../fonts/texta/3108AB_3_0.eot");
+  src: url("../fonts/texta/3108AB_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_3_0.woff2") format("woff2"), url("../fonts/texta/3108AB_3_0.woff") format("woff"), url("../fonts/texta/3108AB_3_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Texta-It';
+  src: url("../fonts/texta/3108AB_4_0.eot");
+  src: url("../fonts/texta/3108AB_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_4_0.woff2") format("woff2"), url("../fonts/texta/3108AB_4_0.woff") format("woff"), url("../fonts/texta/3108AB_4_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Texta-MediumIt';
+  src: url("../fonts/texta/3108AB_5_0.eot");
+  src: url("../fonts/texta/3108AB_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_5_0.woff2") format("woff2"), url("../fonts/texta/3108AB_5_0.woff") format("woff"), url("../fonts/texta/3108AB_5_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Texta-Medium';
+  src: url("../fonts/texta/3108AB_6_0.eot");
+  src: url("../fonts/texta/3108AB_6_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_6_0.woff2") format("woff2"), url("../fonts/texta/3108AB_6_0.woff") format("woff"), url("../fonts/texta/3108AB_6_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Texta-Regular';
+  src: url("../fonts/texta/3108AB_7_0.eot");
+  src: url("../fonts/texta/3108AB_7_0.eot?#iefix") format("embedded-opentype"), url("../fonts/texta/3108AB_7_0.woff2") format("woff2"), url("../fonts/texta/3108AB_7_0.woff") format("woff"), url("../fonts/texta/3108AB_7_0.ttf") format("truetype"); }
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -450,6 +575,17 @@ Figure & Figcaption
     </figure>
 
 */
+figure {
+  margin: 0; }
+
+figcaption {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  margin-bottom: 0;
+  color: #636466;
+  font-family: "Texta-It"; }
+
 /*
 
 Grids
@@ -479,38 +615,10 @@ body {
   width: 90%;
   max-width: 1280px; }
 
-/* ::Global Styles */
+/* ::Background Colors */
 /* ------------------------------------------------------------ */
-.margin-top {
-  margin-top: 2em; }
-
-.margin-bottom {
-  margin-bottom: 2em; }
-
-.padding-top {
-  padding-top: 2em; }
-
-.padding-bottom {
-  padding-bottom: 2em; }
-
-.centered {
-  text-align: center; }
-
-.pull-left {
-  float: left; }
-
-.pull-right {
-  float: right; }
-
-.is-block {
-  display: block; }
-
-.is-uppercase {
-  text-transform: uppercase; }
-
-.csstransitions a {
-  -webkit-transition: all .1s linear;
-  transition: all .1s linear; }
+.bg-yellow {
+  background-color: #F9D839; }
 
 /*
 
@@ -520,6 +628,9 @@ Header
 Styles for the header element
 
 */
+header[role='banner'] {
+  padding: 1.5em; }
+
 /*
 
 Main
@@ -528,6 +639,9 @@ Main
 Styles for the main element
 
 */
+main[role='main'] .callout {
+  padding: 4em; }
+
 /*
 
 Aside
@@ -544,6 +658,13 @@ Footer
 Styles for the footer element
 
 */
+footer[role="contentinfo"] {
+  padding: 3em; }
+  footer[role="contentinfo"] a {
+    color: #000000;
+    font-family: "Texta-BlackIt";
+    text-decoration: none; }
+
 /*
 
 Headings
@@ -558,7 +679,19 @@ Headings
 
 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Texta-BlackIt"; }
+
+h1, .h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.075em;
+  text-transform: uppercase; }
+  h1:after, .h1:after {
+    content: "-";
+    display: block; }
 
 /*
 
@@ -571,14 +704,14 @@ Body Copy
 
 */
 p {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Texta-Regular"; }
 
 /* --- used if wanting to style the first paragraph slightly differently --- */
 ::-moz-selection, ::-moz-selection {
-  background-color: orange;
+  background-color: #F9D839;
   color: #FFFFFF; }
 ::-moz-selection, ::selection {
-  background-color: orange;
+  background-color: #F9D839;
   color: #FFFFFF; }
 
 /*

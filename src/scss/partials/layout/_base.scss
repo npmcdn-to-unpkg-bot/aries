@@ -29,48 +29,9 @@ body {
   max-width: 1280px;
 }
 
-/* ::Global Styles */
+/* ::Background Colors */
 /* ------------------------------------------------------------ */
 
-.margin-top {
-  margin-top: $baselineheight;
-}
-
-.margin-bottom {
-  margin-bottom: $baselineheight;
-}
-
-.padding-top {
-  padding-top: $baselineheight;
-}
-
-.padding-bottom {
-  padding-bottom: $baselineheight;
-}
-
-.centered {
-  text-align: center;
-}
-
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
-}
-
-.is-block {
-  display: block;
-}
-
-.is-uppercase {
-  text-transform: uppercase;
-}
-
-.csstransitions a {
-  -webkit-transition : all .1s linear;
-  -moz-transition : all .1s linear;
-  -o-transition : all .1s linear;
-  transition : all .1s linear;
+.bg-yellow {
+  background-color: $yellow;
 }

@@ -8,5 +8,10 @@ Styles for the footer element
 */
 
 footer[role="contentinfo"] {
-
+  padding: 3em;
+  a {
+    color: $black;
+    font-family: $header-font;
+    text-decoration: none;
+  }
 }

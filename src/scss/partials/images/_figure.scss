@@ -11,7 +11,7 @@ Figure & Figcaption
 */
 
 figure {
-
+  margin: 0;
 }
 
 figure > img {
@@ -19,5 +19,7 @@ figure > img {
 }
 
 figcaption {
-
+  @include font-size(14,no);
+  color: $lightgrey;
+  font-family: $texta-italic;
 }
