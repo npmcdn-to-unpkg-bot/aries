@@ -23,11 +23,7 @@
 // -- branding -------------------------
 
 	$base-color: #F9D839;
-	$yellow: #F9D839;
-	$comp-color: green;
-	$tertiary-color: red;
-	$alt-1: #777777;
-	$alt-2: #CCCCCC;
+
 	$white: #FFFFFF;
 	$black: #000000;
 
@@ -36,7 +32,8 @@
 // -- typography -----------------------
 
 	$body-font: $texta-regular;
-	$header-font: $texta-black-italic;
+	$header-font: $texta-bold;
+	$header-font-italic: $texta-black-italic;
 
 // -- links ----------------------------
 

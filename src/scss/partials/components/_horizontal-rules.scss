@@ -16,7 +16,14 @@ Horizontal Rules
 	border:none;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
-	color: pink;
+	color: $lightgrey;
+}
+
+.rule--short {
+	color: $black;
+	width: 16px;
+	border-bottom-width: 6px;
+	font-style: italic;
 }
 
 .rule--dotted{

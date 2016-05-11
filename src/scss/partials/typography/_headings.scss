@@ -12,12 +12,13 @@ Headings
 
 */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $header-font;
 }
 
-h1,  .h1 {
+h1, .h1 {
 	@include font-size(48);
+	font-family: $header-font-italic;
 	letter-spacing: 0.075em;
 	text-transform: uppercase;
 	&:after {
@@ -27,11 +28,12 @@ h1,  .h1 {
 }
 
 h2, .h2 {
-
+	letter-spacing: 0.05em;
 }
 
 h3, .h3 {
-
+	font-family: $header-font;
+	letter-spacing: 0.05em;
 }
 
 h4, .h4 {
@@ -39,7 +41,9 @@ h4, .h4 {
 }
 
 h5, .h5 {
-
+	font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
 }
 
 h6, .h6 {

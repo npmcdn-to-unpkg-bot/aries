@@ -2,57 +2,45 @@
 
 ## Colors
 
-This is for a color-swatch, requires Compass at the moment.
-
-<ul class="swatch theme-colors">
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-</ul>
-
 */
 
-.swatch {
-	clear: both;
-	float: left;
-	max-width: 640px;
-	li {
-		border: 1px solid black;
-		border-radius: 8px;
-		float: left;
-		height: 120px;
-		list-style: none;
-		margin: 0 4px 4px 0;
-		width: 120px;
-	}
-}
 
-.theme-colors {
-	li {
-		background-color: $base-color;
-		&:nth-child(2) {
-			background-color: $comp-color;
-		}
-		&:nth-child(3) {
-			background-color: $tertiary-color;
-		}
-		&:nth-child(4) {
-			background-color: $alt-1;
-		}
-		&:nth-child(5) {
-			background-color: $alt-2;
-		}
-		&:nth-child(6) {
-			clear: both;
-			background-color: $white;
-		}
-		&:nth-child(7) {
-			background-color: $black;
-		}
-	}
-}
+$grey: rgb(103, 103, 103);
+$lightgrey: rgb(227, 230, 227);
 
+$blue:  		#0074D9;
+$navy:  		#001F3F;
+$teal:  		#39CCCC;
+$green:	 		#2ECC40;
+$olive: 		#3D9970;
+$lime:  		#01FF70;
+$yellow: 		#F9D839;
+$orange:  	#FF851B;
+$red:     	#FF4136;
+
+.grey  		  { color: $grey }
+.blue  		  { color: $blue }
+.navy  		  { color: $navy }
+.teal  		  { color: $teal }
+.green 		  { color: $green }
+.olive 		  { color: $olive }
+.lime  		  { color: $lime }
+.yellow 	  { color: $yellow }
+.orange  	  { color: $orange }
+.red     	  { color: $red }
+.lightgrey  { color: $red }
+
+.bg-blue  		{ background-color: $blue }
+.bg-navy  		{ background-color: $navy }
+.bg-teal  		{ background-color: $teal }
+.bg-green 		{ background-color: $green }
+.bg-olive 		{ background-color: $olive }
+.bg-lime  		{ background-color: $lime }
+.bg-yellow 		{ background-color: $yellow }
+.bg-orange  	{ background-color: $orange }
+.bg-red     	{ background-color: $red }
+.bg-lightgrey { background-color: $lightgrey }
+
+
+
+.muted { opacity: .5 }

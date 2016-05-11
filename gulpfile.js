@@ -44,6 +44,14 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('dist/resources/css'))
 });
 
+gulp.task('basscss', function() {
+  var cssFiles = ['node_modules/basscss-addons/modules/colors/css/colors.css','node_modules/basscss-addons/modules/btn/css/btn.css','node_modules/basscss-addons/modules/btn-primary/css/btn-primary.css'];
+
+  gulp.src(cssFiles)
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('dist/resources/css'))
+});
+
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
