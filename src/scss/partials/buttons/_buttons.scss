@@ -1,82 +1,98 @@
 // - BASE -----------------------------
 
-/* Basscss Btn */
+// colors
+$dark:  #333030;
+$ocean:  #2b90d9;
+$grass: #3ac569;
+$snow: #FFFFFF;
+$salmon: #ff7473;
+$sun: #feee7d;
+$alge: #79a8a9;
+$flower: #353866;
+
 
 .btn {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: bold;
-  text-decoration: none;
+  display: flex;
+  overflow: hidden;
+  margin: 20px 10px 0 0;
+  padding: 12px 12px;
   cursor: pointer;
-  display: inline-block;
-  line-height: 1.125rem;
-  padding: .5rem 1rem;
-  margin: 0;
-  height: auto;
-  border: 1px solid transparent;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  color: inherit;
-  background-color: transparent;
-}
-
-.btn:hover {
-  text-decoration: none;
-}
-
-.btn:focus {
-  outline: none;
-  border-color: rgba(0, 0, 0, .125);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, .25);
-}
-
-::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/* Basscss Btn Primary */
-
-.btn-primary {
+  user-select: none;
+  transition: all 60ms ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
   color: #fff;
-  background-color: $blue;
-  border-radius: 3px;
+  border: 0 none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.3;
+  appearance: none;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+
+  &:hover {
+    transition: all 60ms ease;
+    opacity: .85;
+  }
+
+  &:active {
+    transition: all 60ms ease;
+    transform: scale(.97);
+    opacity: .75;
+  }
 }
 
-.btn-primary:hover {
-  box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .0625);
+.btn.-dark {
+  color: $snow;
+  background: $dark;
 }
 
-.btn-primary:active {
-  box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .125),
-    inset 0 3px 4px 0 rgba(0, 0, 0, .25),
-    0 0 1px rgba(0, 0, 0, .125);
+.btn.-green {
+  color: $snow;
+  background: $grass;
 }
 
-.btn-primary:disabled,
-.btn-primary.is-disabled {
-  opacity: .5;
+.btn.-blue {
+  color: $snow;
+  background: $ocean;
 }
 
-/* Basscss Btn Primary */
-
-.btn-primary {
-  color: #fff;
-  background-color: $blue;
-  border-radius: 3px;
+.btn.-salmon {
+  color: $snow;
+  background: $salmon;
 }
 
-.btn-primary:hover {
-  box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .0625);
+.btn.-sun {
+  color: #f15c5c;
+  background: $sun;
 }
 
-.btn-primary:active {
-  box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .125),
-    inset 0 3px 4px 0 rgba(0, 0, 0, .25),
-    0 0 1px rgba(0, 0, 0, .125);
+.btn.-alge {
+  color: #f4f7f7;
+  background: $alge;
 }
 
-.btn-primary:disabled,
-.btn-primary.is-disabled {
-  opacity: .5;
+.btn.-flower {
+  color: #FE8CDF;
+  background: $flower;
 }
+
+.btn.-border {
+  color: $ocean;
+  border: 2px solid $ocean;
+  background: transparent;
+
+  &:hover, &.-active {
+    color: $snow;
+    border-color: $ocean;
+    background: $ocean;
+  }
+}
+
+.btn-gradient {
+    @include border-gradient($yellow, $teal, 2px);
+  }

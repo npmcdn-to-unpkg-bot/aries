@@ -37,11 +37,13 @@ gulp.task('scss', function() {
     .pipe(prefix())
     .pipe(rename('main.css'))
     .pipe(gulp.dest('dist/resources/css'))
+    .pipe(gulp.dest('site/public/resources/css'))
     .pipe(reload({stream:true}))
     .pipe(cssmin())
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/resources/css'))
+    .pipe(gulp.dest('site/public/resources/css'))
 });
 
 gulp.task('basscss', function() {
@@ -65,6 +67,7 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/resources/js'))
+    .pipe(gulp.dest('site/public/resources/js'))
 });
 
 // Fonts
@@ -134,7 +137,8 @@ gulp.task('imgmin', function () {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('dist/resources/img'));
+        .pipe(gulp.dest('dist/resources/img'))
+        .pipe(gulp.dest('site/public/resources/img'));
 });
 
 gulp.task('default', ['browser-sync', 'minify-html', 'js', 'fonts', 'compress', 'imgmin', 'scss', 'jshint', 'watch']);

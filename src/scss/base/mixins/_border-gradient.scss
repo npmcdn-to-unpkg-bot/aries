@@ -1,0 +1,16 @@
+// Border Gradient
+
+@mixin border-gradient($from, $to, $width) {
+  border-left: $width solid $from;
+  border-right: $width solid $to;
+  background-image:
+    // both needed for top & bottom
+    linear-gradient(left, $from, $to),
+    linear-gradient(left, $from, $to);
+
+  // 100% left & right, $width px top & bottom
+  background-size: 100% $width;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}

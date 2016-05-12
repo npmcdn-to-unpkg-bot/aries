@@ -30,15 +30,14 @@
 
 
     <link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/main.min.css">
+    <link rel="stylesheet" href="/resources/css/main.min.css">
   </head>
   <body>
 
 {% include "_includes/header" %}
 
-<main role="main">
-  {% block content %}
-  {% endblock %}
+<main id="main" role="main">
+  {% block content %}{% endblock %}
 </main>
 
 {% include "_includes/footer" %}

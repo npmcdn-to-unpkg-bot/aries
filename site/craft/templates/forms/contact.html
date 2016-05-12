@@ -1,12 +1,12 @@
-{% extends "sproutforms/_layout" %}
+{% extends "_layout" %}
 
 {% block content %}
 
-	<h1>Output your form using a single tag.</h1>
+<div class="content center">
+	<h1 class="mb0">Contact Form</h1>
+</div>
 
-	<p>Take a look at the code of this template to see an example with comments.</p>
-
-	<hr>
+<div class="content content-mini flex flex-wrap">
 
 	{# Check if we should display or form or thank you message #}
 	{% if craft.request.getParam('message') == 'thank-you' %}
@@ -20,5 +20,7 @@
 	  {{ craft.sproutForms.displayForm('contact') }}
 
 	{% endif %}
+
+</div>
 
 {% endblock %}

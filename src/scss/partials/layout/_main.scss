@@ -10,7 +10,8 @@ Styles for the main element
 main[role='main'] {
 
   .callout {
-    padding: 4em;
+    padding: 2.5em;
+    min-width: 320px;
   }
 
 }

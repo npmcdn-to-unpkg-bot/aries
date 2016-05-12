@@ -1,0 +1,26 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+<div class="content center">
+	<h1 class="mb0">New Project Enquiry</h1>
+</div>
+
+<div class="content content-mini flex flex-wrap">
+
+	{# Check if we should display or form or thank you message #}
+	{% if craft.request.getParam('message') == 'thank-you' %}
+
+		{# Display our thank you message #}
+		<p>Thank you for your message. We'll be in touch soon!</p>
+
+	{% else %}
+
+	  {# Display our Contact Form #}
+	  {{ craft.sproutForms.displayForm('projectEnquiry') }}
+
+	{% endif %}
+
+</div>
+
+{% endblock %}
