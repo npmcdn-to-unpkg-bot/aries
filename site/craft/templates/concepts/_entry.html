@@ -1,0 +1,80 @@
+swa{% extends "_layout" %}
+
+{% block content %}
+
+<article class="">
+
+    <div class="content center">
+      <h1 class="mb0">{{ entry.title }}</h1>
+    </div>
+
+    <figure class="mb4">
+      <img src="assets/Triple2.png" alt="" />
+    </figure>
+
+    <div class="content content-mini flex flex-wrap">
+      <section>
+
+        <div class="line-item mb2 clearfix">
+        <div class="flex">
+          <div class="flex-body">
+          <div class="h2 m0">Project Concept</div>
+
+          <!-- <script>
+          $('p').addClass('mt0 pr4');
+          </script> -->
+
+          {{ entry.conceptDescription }}
+
+          </div>
+
+        {% if entry.sidebar | length %}
+          <aside class="mb2 callout bg-yellow">
+            <h3 class="mt0">Equipment Considerations</h3>
+            <p>
+              Cost $20k per display for purchase.  Special considerations for rental but most likely purchase items.
+              The computer control and hardware system ~$10k for the system.
+            </p>
+
+          </aside>
+      {% endif %}
+
+
+      </div>
+
+  {% if entry.estimatedTimeline | length %}
+  <hr class="rule">
+
+  <div class="flex justify-between py1">
+    <div class="h2 m0">Estimated Timeline</div>
+    <div>
+      <span class="h3">{{ entry.estimatedTimeline}}</span>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if entry.projectEstimate | length %}
+  <hr class="rule">
+
+  <div class="flex justify-between py1">
+    <div class="h2 m0">Project Estimate</div>
+    <div>
+      <span class="h3">{{ entry.projectEstimate }}</span>
+    </div>
+  </div>
+  {% endif %}
+
+  <hr class="rule">
+
+    <h4 class="mb0">Terms</h4>
+    <p class="mt0 max-width-2">
+      All specific assets, objects, storyboards, or creative direction need to be delivered to CT prior to CT commencement of the project.   The CT content creation and delivery schedule will be based on the date by which all the aforementioned assets are delivered.
+    </p>
+
+    <hr class="rule clearfix">
+
+      </section>
+    </div>
+
+</article>
+{% endblock %}
