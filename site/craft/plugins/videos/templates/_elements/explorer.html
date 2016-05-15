@@ -1,0 +1,78 @@
+{% import "_includes/forms" as forms %}
+
+<div class="videos-explorer">
+    <div class="body has-sidebar">
+        <div id="content" class="content has-sidebar">
+            <div id="sidebar" class="sidebar">
+
+                {% set gatewayOptions = {
+                    youtube:"youtube",
+                    vimeo:"vimeo",
+                } %}
+
+                {% set gatewayOptions = [] %}
+                {% for gateway in nav.gateways %}
+                    {% set gatewayOptions = gatewayOptions|merge([{ label: gateway.name|t, value: gateway.handle }]) %}
+                {% endfor %}
+
+
+                {% if namespaceInputId is defined %}
+                    {% set targetPrefix = 'gateway-' ~ namespaceInputId %}
+                {% else %}
+                    {% set targetPrefix = 'gateway' %}
+                {% endif %}
+
+                <div class="gateways first">
+                    {{ forms.select({
+                        name: 'gateway',
+                        options: gatewayOptions,
+                        toggle: true,
+                        targetPrefix: targetPrefix
+                    }) }}
+                </div>
+
+                <nav>
+                    {% for k, gateway in nav.gateways %}
+                        {% set showGateway = (loop.first ? true : false) %}
+                        <div id="{{ targetPrefix }}{{ gateway.handle }}"{% if not showGateway %} class="hidden"{% endif %}>
+                            {% if nav.gatewaySections[k] %}
+                                <ul>
+                                    {% for sectionName, items in nav.gatewaySections[k] %}
+                                        <li class="heading"><span>{{ sectionName }}</span></li>
+
+                                        {% for itemKey, item in items %}
+                                            <li>
+                                                <a href="#" data-gateway="{{ gateway.handle }}" data-method="{{ item.method }}"{% if item.options is defined %} data-options="{{ item.options|json_encode }}"{% endif %}>{{ item.name }}</a>
+
+
+                                            </li>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <p>No sections</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </nav>
+
+            </div>
+
+            <div class="main">
+                <div class="toolbar">
+                    {{ forms.text({
+                        class: 'search',
+                        name: 'search',
+                        placeholder: 'Search videos'
+                    }) }}
+
+                    <div class="spinner right hidden"></div>
+                </div>
+
+                <div class="content">
+                    <div class="videos"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

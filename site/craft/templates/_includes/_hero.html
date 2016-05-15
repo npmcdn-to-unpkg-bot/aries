@@ -1,0 +1,40 @@
+{% for matrixBlock in entry.hero %}
+{% if matrixBlock.type == "heroVideo" %}
+
+{% elseif matrixBlock.type == "heroImage" %}
+
+<figure class="hero mb4">
+  {% set asset = matrixBlock.heroImageAsset.first() %}
+  {% if asset | length %}
+
+    <div class="hero-aspect">
+      <img id="homepageHero" class="aspect-ratio-content" style="width: 100%;"
+            sizes="auto"
+            srcset="
+            {{ asset.url('heroSmall') }} 742w,
+            {{ asset.url('heroMedium') }} 1180w,
+            {{ asset.url('heroLarge') }} 1920w,
+            {{ asset.url('heroExtraLarge') }} 3840w"
+            src="{{ asset.url('heroSmall') }}"
+            alt="{{ asset.title }}" />
+    </div>
+
+  {% endif %}
+</figure>
+
+{% elseif matrixBlock.type == "heroVideoLoop" %}
+
+<figure class="hero">
+
+{% set video = matrixBlock.heroVideoMp4.first() %}
+{% set videoImage = matrixBlock.heroVideoCoverImage.first() %}
+
+{% if video|length and videoImage|length %}
+
+  <div style="height: 45vw;" class="" data-vide-bg="{{ video.url }}" data-vide-options="loop: true, muted: true, position: 0% 50%"></div>
+
+{% endif %}
+</figure>
+
+{% endif %}
+{% endfor %}

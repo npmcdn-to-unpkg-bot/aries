@@ -8,21 +8,15 @@
       <h1 class="mb0">{{ entry.title }}</h1>
     </div>
 
-    <figure class="mb4">
-      <img src="assets/Triple2.png" alt="" />
-    </figure>
+    {% include "_includes/_hero" %}
 
     <div class="content content-mini flex flex-wrap">
       <section>
 
         <div class="line-item mb2 clearfix">
         <div class="flex">
-          <div class="flex-body">
+          <div class="flex-body main-body">
           <div class="h2 m0">Project Concept</div>
-
-          <!-- <script>
-          $('p').addClass('mt0 pr4');
-          </script> -->
 
           {{ entry.conceptDescription }}
 
@@ -30,12 +24,10 @@
 
         {% if entry.sidebar | length %}
           <aside class="mb2 callout bg-yellow">
-            <h3 class="mt0">Equipment Considerations</h3>
-            <p>
-              Cost $20k per display for purchase.  Special considerations for rental but most likely purchase items.
-              The computer control and hardware system ~$10k for the system.
-            </p>
-
+            {% for block in entry.sidebar %}
+            <h3 class="mt0">{{ block.sidebarTitle }}</h3>
+            <p>{{ block.sidebarBody }}</p>
+            {% endfor %}
           </aside>
       {% endif %}
 
