@@ -1050,6 +1050,11 @@ Media Objects
 </div>
 
 */
+.video-container {
+  z-index: 3000; }
+  .video-container:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+
 .intrinsic-container {
   position: relative;
   height: 0;

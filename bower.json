@@ -1,0 +1,21 @@
+{
+  "name": "ct-digital",
+  "description": "CT Digital website",
+  "main": "",
+  "authors": [
+    "Niall Thompson <niall@dandelion-burdock.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/niallthompson/aries",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.6.0"
+  }
+}

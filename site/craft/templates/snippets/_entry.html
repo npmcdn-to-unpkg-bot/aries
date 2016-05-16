@@ -1,0 +1,47 @@
+{#
+ # Snippet entry template
+ # ---------------
+#}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<article class="">
+
+    <div class="content center">
+      <h1 class="mb0">{{ entry.title }}</h1>
+    </div>
+
+    {% include "_includes/_hero" %}
+
+    <div class="content content-mini flex flex-wrap">
+      <section>
+
+        <div class="line-item mb2 clearfix">
+        <div class="flex">
+          <div class="flex-body main-body">
+          <div class="h2 m0">Project Concept</div>
+
+          {{ entry.conceptDescription }}
+
+          </div>
+
+        {% if entry.sidebar | length %}
+          <aside class="mb2 callout bg-yellow">
+            {% for block in entry.sidebar %}
+            <h3 class="mt0">{{ block.sidebarTitle }}</h3>
+            <p>{{ block.sidebarBody }}</p>
+            {% endfor %}
+          </aside>
+      {% endif %}
+
+      </div>
+
+  <hr class="rule">
+
+      </section>
+    </div>
+
+</article>
+{% endblock %}

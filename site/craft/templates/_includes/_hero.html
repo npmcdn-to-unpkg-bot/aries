@@ -1,6 +1,13 @@
 {% for matrixBlock in entry.hero %}
 {% if matrixBlock.type == "heroVideo" %}
 
+<div class="video-container-no-margin">
+  {% set video = matrixBlock.heroVideo %}
+
+  {{ video.embed({ portrait: false, title: false, byline: false, width: 500, height: 281, color: "F9D839" }) }}
+
+</div>
+
 {% elseif matrixBlock.type == "heroImage" %}
 
 <figure class="hero mb4">
