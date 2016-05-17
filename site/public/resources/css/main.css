@@ -951,6 +951,23 @@ Breadcrumb Navigation
 </ol>
 
 */
+.grid-image {
+  background-image: url("https://ableton-production.imgix.net/uploads/homepage-teasers/PWYT_Loop15.jpg?auto=format&dpr=2&fit=crop&fm=jpg&h=537&ixjsv=1.1.3&q=50&w=806");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+
+.homepage-grid > .cell:nth-child(1) {
+  float: left; }
+
+.homepage-grid > .cell:nth-child(1) {
+  width: 58.33333vw; }
+
+.homepage-teaser {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.66667%; }
+
 .bigitem {
   -webkit-box-flex: 4;
   -webkit-flex: 4 0 0;
